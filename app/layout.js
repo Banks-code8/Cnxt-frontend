@@ -3,6 +3,7 @@ import './globals.css';
 import Headers from '@/components/partials/Headers';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Footer from '@/components/partials/Footer';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <main className="pt-24">
           <Headers />
           {children}
+          <Footer />
         </main>
       </body>
     </html>

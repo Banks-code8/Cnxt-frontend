@@ -15,6 +15,7 @@ import ItemCard from '@/components/cards/ItemCard';
 import DoublePageBorders from '@/components/wrappers/DoublePageBorders';
 import FeedbackCard from '@/components/cards/FeedbackCard';
 import SpecificationItem from '@/components/sections/SpecificationItem';
+import AdsContent from '@/components/sections/AdsContent';
 
 export const metadata = {
   title: 'Welcome to Cnxt',
@@ -303,6 +304,17 @@ export default function Home() {
                 />
               ))}
             </div>
+          </div>
+        </PageBorders>
+
+        {/* section6 */}
+        <PageBorders>
+          <div className="flex flex-col gap-8">
+            <HeaderOne
+              text={'Trusted by over 800+ companies'}
+              textCenter={true}
+            />
+            <AdsContent />
           </div>
         </PageBorders>
       </div>

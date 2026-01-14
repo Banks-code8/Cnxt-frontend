@@ -1,49 +1,46 @@
 import Link from 'next/link';
 import React from 'react';
-import MainButon from '../button/MainButon';
+import MainButton from '../button/MainButton';
 import Navitem from '../typography/Navitem';
 import MobileNav from './MobileNav';
 
-const Headers = ({ hero }) => {
+const Headers = () => {
   const navigations = [
-    { path: '/', link: 'Why  Us' },
-    { path: '/', link: 'About Us' },
-    { path: '/', link: 'Markets' },
+    { link: '/', title: 'Why  Us' },
+    { link: '/', title: 'About Us' },
+    { link: '/', title: 'Markets' },
   ];
   return (
-    <header className="fixed flex w-full items-center justify-between bg-transparent px-[6vw] py-[4vh]">
-      {/* logo */}
-      <Link href={'/'}>
-        <h1 className="text-[30px] font-bold leading-[30px] tracking-tight">
-          CnxtHub
-        </h1>
-      </Link>
-
-      {/* navigation */}
-      <div className="hidden md:block">
-        <nav>
-          <ul className="flex gap-8">
+    <header className="">
+      <div className="relative">
+        {' '}
+        <div className="fixed top-0 flex w-full items-center justify-between bg-transparent px-[6vw] py-[4vh] backdrop-blur-[10px]">
+          {' '}
+          {/* logo */}
+          <Link href={'/'}>
+            <h1 className="text-[30px] font-bold leading-[30px] tracking-tight">
+              CnxtHub
+            </h1>
+          </Link>
+          {/* navigation */}
+          <div className="hidden gap-8 md:flex">
             {navigations.map((item, index) => (
-              <Link key={index} href={item.path}>
-                <Navitem text={item.link} />
+              <Link key={index} href={item.link}>
+                <Navitem text={item.title} />
               </Link>
             ))}
-          </ul>
-        </nav>
+          </div>
+          {/* sign up */}
+          <div className="flex gap-4">
+            <Link href={'/'}>
+              {' '}
+              <MainButton text={'Register'} />{' '}
+            </Link>
+            {/* mobile nav */}
+            <MobileNav />
+          </div>
+        </div>
       </div>
-
-      {/* sign up */}
-      <div className="flex gap-4">
-        <Link href={'/'}>
-          {' '}
-          <MainButon text={'register'} />{' '}
-        </Link>
-        {/* mobile nav */}
-        <MobileNav />
-      </div>
-
-      {/* hero */}
-      {hero}
     </header>
   );
 };

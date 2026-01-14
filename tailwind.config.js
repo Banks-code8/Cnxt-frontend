@@ -16,8 +16,15 @@ module.exports = {
         mainBlack: '#000000',
         mainGray: '#777777',
         primary: '#289BDE',
+        lightestBlue: '#F4FAFD',
+      },
+      backgroundImage: {
+        Herobg: "url('/Herobg.png')",
+      },
+      boxShadow: {
+        'custom-primary': '4px 4px 25px 0 rgba(90, 103, 216, 0.2)',
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")], // ⚠️ Required @tailwindcss/forms plugin.
+  plugins: [require('@tailwindcss/forms')], // ⚠️ Required @tailwindcss/forms plugin.
 };

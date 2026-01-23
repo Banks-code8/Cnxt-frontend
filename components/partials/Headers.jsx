@@ -8,7 +8,7 @@ const Headers = () => {
   const navigations = [
     { link: '/', title: 'Why  Us' },
     { link: '/', title: 'About Us' },
-    { link: '/', title: 'Markets' },
+    { link: '/', title: 'Dashboard' },
   ];
   return (
     <header className="">

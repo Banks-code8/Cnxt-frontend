@@ -24,15 +24,15 @@ export const metadata = {
 export default function Home() {
   const ourServices = [
     {
-      image: cnxtifi,
+      image: cnxthub,
       title: 'CnxtHub',
       subtitle:
         'Some quick example text to build on the card title and make up the bulk of the card.',
-      btnLink: '/',
+      btnLink: '/product',
       btnText: 'Learn More',
     },
     {
-      image: cnxthub,
+      image: cnxtifi,
       title: 'CnxtiFi',
       subtitle:
         'Some quick example text to build on the card title and make up the bulk of the card.',
@@ -44,7 +44,7 @@ export default function Home() {
       title: 'EdCnxt',
       subtitle:
         'Some quick example text to build on the card title and make up the bulk of the card.',
-      btnLink: '/',
+      btnLink: '/course',
       btnText: 'Learn More',
     },
   ];

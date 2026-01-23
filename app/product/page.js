@@ -1,21 +1,11 @@
-import MainCard from '@/components/cards/MainCard';
-import MainHero from '@/components/hero/MainHero';
 import HeaderOne from '@/components/typography/HeaderOne';
 import MainText from '@/components/typography/MainText';
 import PageBorders from '@/components/wrappers/PageBorders';
 import cnxtifi from '@/public/images/cnxtifiImg.png';
-import edcnxt from '@/public/images/edcnxtImg.png';
-import cnxthub from '@/public/images/cnxthubImg.png';
-import Ratings from '@/components/sections/Ratings';
-import explore from '@/public/images/exploreImg.png';
 import ImageWrapper from '@/components/wrappers/ImageWrapper';
 import Link from 'next/link';
 import MainButton from '@/components/button/MainButton';
 import ItemCard from '@/components/cards/ItemCard';
-import DoublePageBorders from '@/components/wrappers/DoublePageBorders';
-import FeedbackCard from '@/components/cards/FeedbackCard';
-import SpecificationItem from '@/components/sections/SpecificationItem';
-import AdsContent from '@/components/sections/AdsContent';
 
 export const metadata = {
   title: 'Welcome to Cnxt',

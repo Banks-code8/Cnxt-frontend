@@ -6,7 +6,7 @@ import show from '@/public/icons/show.png';
 
 const SpecificationItem = ({ title, subtitle, items, nestedItems }) => {
   return (
-    <ul className="shadow-custom-primary rounded-[20px]">
+    <ul className="rounded-[10px] shadow-custom-primary">
       <li>
         <details className="group/parent">
           <summary className="flex items-center justify-between p-[20px]">

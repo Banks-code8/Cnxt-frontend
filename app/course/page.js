@@ -61,7 +61,7 @@ export default function Home() {
             </div>
             <div className="grid gap-4 md:grid-cols-4 md:gap-8">
               {ourTeam.map((item, index) => (
-                <Link href={`/product/${item.id}`} key={index}>
+                <Link href={`/course/${item.id}`} key={index}>
                   <ItemCard
                     image={item.image}
                     title={item.title}

@@ -11,15 +11,15 @@ import explore from '@/public/images/exploreImg.png';
 import ImageWrapper from '@/components/wrappers/ImageWrapper';
 import Link from 'next/link';
 import MainButton from '@/components/button/MainButton';
-import ItemCard from '@/components/cards/ItemCard';
+import ItemCard from '@/components/cards/MainCard';
 import DoublePageBorders from '@/components/wrappers/DoublePageBorders';
 import FeedbackCard from '@/components/cards/FeedbackCard';
 import SpecificationItem from '@/components/sections/SpecificationItem';
 import AdsContent from '@/components/sections/AdsContent';
 
 export const metadata = {
-  title: 'Welcome to Cnxt',
-  description: 'Connect and Collaborate Seamlessly with Cnxt',
+  title: 'EdCnxt',
+  description: 'learn With EdCnxt',
 };
 export default function Home() {
   const ourTeam = [
@@ -28,24 +28,32 @@ export default function Home() {
       image: cnxtifi,
       title: 'Awlad Hossain',
       subtitle: 'UIUX Designer',
+      rate: '4.8',
+      cost: '$25',
     },
     {
       id: '1',
       image: cnxtifi,
       title: 'Jannatul Islam',
       subtitle: 'Motion Design',
+      rate: '4.8',
+      cost: '$25',
     },
     {
       id: '2',
       image: cnxtifi,
       title: 'Imran Hossain',
       subtitle: 'Graphic Designer',
+      rate: '4.8',
+      cost: '$25',
     },
     {
       id: '3',
       image: cnxtifi,
       title: 'Nishi Akter',
       subtitle: 'Web Developer',
+      rate: '4.8',
+      cost: '$25',
     },
   ];
 
@@ -62,10 +70,13 @@ export default function Home() {
             <div className="grid gap-4 md:grid-cols-4 md:gap-8">
               {ourTeam.map((item, index) => (
                 <Link href={`/course/${item.id}`} key={index}>
-                  <ItemCard
+                  <MainCard
                     image={item.image}
                     title={item.title}
                     subtitle={item.subtitle}
+                    useRate={true}
+                    rate={item.rate}
+                    cost={item.cost}
                   />
                 </Link>
               ))}

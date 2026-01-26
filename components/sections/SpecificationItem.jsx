@@ -4,7 +4,7 @@ import MainText from '../typography/MainText';
 import ImageWrapper from '../wrappers/ImageWrapper';
 import show from '@/public/icons/show.png';
 
-const SpecificationItem = ({ title, subtitle, items, nestedItems }) => {
+const SpecificationItem = ({ title, subtitle }) => {
   return (
     <ul className="rounded-[10px] shadow-custom-primary">
       <li>
@@ -24,28 +24,7 @@ const SpecificationItem = ({ title, subtitle, items, nestedItems }) => {
           <article className="p-[20px]">
             <MainText text={subtitle} />
           </article>
-          <div>
-            {nestedItems === true &&
-              items.map((item, index) => (
-                <details key={index} className="group">
-                  <summary className="flex items-center justify-between px-[20px] py-[10px]">
-                    <TitleText text={item.title} />
-                    <ImageWrapper
-                      src={show}
-                      alt={'cnxt ecosystem'}
-                      width={30}
-                      height={30}
-                      styles={
-                        'group-open:rotate-180 transition-all duration-300 bg-contain bg-no-reoeat'
-                      }
-                    />
-                  </summary>
-                  <article className="p-[20px]">
-                    <MainText text={item.subtitle} />
-                  </article>
-                </details>
-              ))}
-          </div>
+          <div></div>
         </details>
       </li>
     </ul>

@@ -8,7 +8,7 @@ import cnxtifi from '@/public/images/cnxtifiImg.png';
 import MainText from '@/components/typography/MainText';
 import TitleText from '@/components/typography/TitleText';
 import SpecificationItem from '@/components/sections/SpecificationItem';
-import ItemCard from '@/components/cards/ItemCard';
+import ItemCard from '@/components/cards/MainCard';
 
 const ourTeam = [
   {
@@ -147,7 +147,10 @@ export default async function ProductPage({ params }) {
 
   return (
     <div className="min-h-screen">
-      {/* use corsera fetch ads link coursera/otheer edtech*/}
+      {/* use udyme fetch ads link edtech for dynamic images or videos 
+      *and use similar title with routeted tile from card i.e <HeaderOne text={course.title} />
+      so that each dynamic link carries title dynamically,
+      * work on the local host route dynamiv page naming*/}
       <PageBorders background={'bg-primary'}>
         <div className="flex flex-col gap-8">
           <HeaderOne text={course.title} />
@@ -234,7 +237,7 @@ export default async function ProductPage({ params }) {
 
           <div className="grid gap-4 md:grid-cols-4 md:gap-8">
             {relatedCourses.map((item, index) => (
-              <ItemCard
+              <MainCard
                 key={index}
                 image={item.image}
                 title={item.title}

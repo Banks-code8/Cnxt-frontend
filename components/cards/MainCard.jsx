@@ -1,26 +1,36 @@
 import React from 'react';
-import ImageWrapper from '../wrappers/ImageWrapper';
-import TitleText from '../typography/TitleText';
 import MainText from '../typography/MainText';
-import Link from 'next/link';
-import MainButon from '../button/MainButton';
+import ImageWrapper from '../wrappers/ImageWrapper';
+import icon from '@/public/images/cnxtifiImg.png';
 
-const MainCard = ({ image, title, subtitle, btnLink, btnText }) => {
+const MainCard = ({ image, title, subtitle, useRate, rate, cost }) => {
   return (
-    <div className="shadow-custom-primary grid grid-cols-2 gap-4 overflow-hidden rounded-[10px]">
+    <div className="flex flex-col gap-4 overflow-hidden rounded-[10px] shadow-custom-primary">
       <ImageWrapper
         src={image}
         alt={`welcome to cnxt ${title}`}
         width={300}
         height={300}
-        styles={'bg-no-repeat bg-cover h-full'}
+        styles={'bg-no-repeat bg-cover w-full'}
       />
-      <div className="flex flex-col gap-4 px-[10px] py-[20px]">
-        <TitleText text={title} />
-        <MainText text={subtitle} color={'text-mainGray'} />
-        <Link href={btnLink} className="flex justify-start">
-          <MainButon text={btnText} />
-        </Link>{' '}
+      <div className="flex flex-col gap-2 px-[20px] py-[10px]">
+        <MainText text={title} />
+        <MainText text={subtitle} color={'text-mainGray'} />{' '}
+        {useRate && (
+          <div className="flex justify-between">
+            <div className="flex items-center gap-2">
+              <ImageWrapper
+                src={icon}
+                alt={`welcome to cnxt ${title}`}
+                width={30}
+                height={30}
+                styles={'bg-no-repeat bg-cover w-full'}
+              />{' '}
+              <MainText text={rate} />
+            </div>{' '}
+            <MainText text={cost} />
+          </div>
+        )}
       </div>
     </div>
   );

@@ -29,23 +29,16 @@ export default function Home() {
       subtitle:
         'Some quick example text to build on the card title and make up the bulk of the card.',
       btnLink: '/product',
-      btnText: 'Learn More',
+      btnText: 'Visit Now',
     },
-    {
-      image: cnxtifi,
-      title: 'CnxtiFi',
-      subtitle:
-        'Some quick example text to build on the card title and make up the bulk of the card.',
-      btnLink: '/',
-      btnText: 'Learn More',
-    },
+
     {
       image: edcnxt,
       title: 'EdCnxt',
       subtitle:
         'Some quick example text to build on the card title and make up the bulk of the card.',
       btnLink: '/course',
-      btnText: 'Learn More',
+      btnText: 'Visit Now',
     },
   ];
 
@@ -102,27 +95,26 @@ export default function Home() {
       title: 'What other services are you compatible with?',
       subtitle:
         'There are many variations of passages of available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the generators on the.',
-      items: [
-        {
-          title: 'I have a technical i need resolved, who do i email?',
-          subtitle:
-            'There are many variations of passages of available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the generators on the.',
-        },
-        {
-          title: 'What other services are you compatible with?',
-          subtitle:
-            'There are many variations of passages of available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the generators on the.',
-        },
-        {
-          title: 'What other services are you compatible with?',
-          subtitle:
-            'There are many variations of passages of available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the generators on the.',
-        },
-      ],
+    },
+    {
+      title: 'I have a technical i need resolved, who do i email?',
+      subtitle:
+        'There are many variations of passages of available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the generators on the.',
+    },
+    {
+      title: 'What other services are you compatible with?',
+      subtitle:
+        'There are many variations of passages of available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the generators on the.',
+    },
+    {
+      title: 'What other services are you compatible with?',
+      subtitle:
+        'There are many variations of passages of available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the generators on the.',
     },
   ];
   return (
     <div className="min-h-screen">
+      {/* thisis a landing page */}
       <div>
         <MainHero />
 
@@ -142,9 +134,9 @@ export default function Home() {
                 textCenter={true}
               />
             </div>
-            <div className="grid gap-4 md:grid-cols-3 md:gap-8">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
               {ourServices.map((item, index) => (
-                <MainCard
+                <ItemCard
                   key={index}
                   image={item.image}
                   title={item.title}
@@ -237,7 +229,7 @@ export default function Home() {
             </div>
             <div className="grid gap-4 md:grid-cols-4 md:gap-8">
               {ourTeam.map((item, index) => (
-                <ItemCard
+                <MainCard
                   key={index}
                   image={item.image}
                   title={item.title}
@@ -293,14 +285,12 @@ export default function Home() {
                 textCenter={true}
               />
             </div>
-            <div className="gap-4 md:gap-8">
+            <div className="flex flex-col gap-4 md:gap-8">
               {frequentQA.map((item, index) => (
                 <SpecificationItem
                   key={index}
                   title={item.title}
                   subtitle={item.subtitle}
-                  nestedItems={true}
-                  items={item.items}
                 />
               ))}
             </div>

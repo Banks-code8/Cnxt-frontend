@@ -5,7 +5,7 @@ import cnxtifi from '@/public/images/cnxtifiImg.png';
 import ImageWrapper from '@/components/wrappers/ImageWrapper';
 import Link from 'next/link';
 import MainButton from '@/components/button/MainButton';
-import ItemCard from '@/components/cards/ItemCard';
+import ItemCard from '@/components/cards/MainCard';
 
 export const metadata = {
   title: 'Welcome to Cnxt',

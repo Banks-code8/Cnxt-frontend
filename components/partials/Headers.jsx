@@ -9,6 +9,7 @@ const Headers = () => {
     { link: '/', title: 'Why  Us' },
     { link: '/', title: 'About Us' },
     { link: '/', title: 'Dashboard' },
+    { link: '/', title: 'Blog' },
   ];
   return (
     <header className="">
@@ -32,6 +33,7 @@ const Headers = () => {
           </div>
           {/* sign up */}
           <div className="flex gap-4">
+            {/* searchbar */}
             <Link href={'/'}>
               {' '}
               <MainButton text={'Register'} />{' '}

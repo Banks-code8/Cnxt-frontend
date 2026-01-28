@@ -138,9 +138,11 @@ export default function Home() {
               {ourServices.map((item, index) => (
                 <ItemCard
                   key={index}
+                  useImage={true}
                   image={item.image}
                   title={item.title}
                   subtitle={item.subtitle}
+                  useBtnText={true}
                   btnLink={item.btnLink}
                   btnText={item.btnText}
                 />
